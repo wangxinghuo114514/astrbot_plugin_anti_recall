@@ -4,7 +4,7 @@ desc: 防撤回插件，自动分析撤回消息并生成锐评
 help: 插件会自动监听群聊中的撤回消息，获取撤回内容并使用 AI 进行锐评，同时检测违规内容。
 version: 1.0.0
 author: wangxinghuo
-repo: https://github.com/wangxinghuo/astrbot_plugin_anti_recall
+repo: https://github.com/wangxinghuo114514/astrbot_plugin_anti_recall
 license: MIT
 tags:
   - 防撤回
