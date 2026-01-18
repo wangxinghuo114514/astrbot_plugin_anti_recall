@@ -1,0 +1,80 @@
+{
+  "enabled": {
+    "description": "是否启用防撤回功能",
+    "type": "bool",
+    "default": true
+  },
+  "enable_ai_analysis": {
+    "description": "是否启用 AI 分析和锐评",
+    "type": "bool",
+    "default": true
+  },
+  "ai_comment_prompt": {
+    "description": "AI 锐评提示词",
+    "type": "text",
+    "default": "你是一个幽默风趣的评论家，请对以下撤回的内容进行锐评，语气要轻松幽默，不要太严肃。内容如下：",
+    "hint": "用于生成 AI 锐评的提示词"
+  },
+  "enable_content_filter": {
+    "description": "是否启用违规内容检测",
+    "type": "bool",
+    "default": true
+  },
+  "ai_filter_prompt": {
+    "description": "AI 违规检测提示词",
+    "type": "text",
+    "default": "你是一个内容审核专家，请判断以下内容是否包含违法违规信息。请只回答 '是' 或 '否'，不要有任何其他文字。内容如下：",
+    "hint": "用于检测内容是否违规的 AI 提示词"
+  },
+  "fixed_llm_provider": {
+    "description": "固定 LLM 提供商 ID",
+    "type": "string",
+    "default": "",
+    "hint": "留空则使用当前会话的提供商，填写后将使用指定的提供商进行分析"
+  },
+  "enable_context_analysis": {
+    "description": "是否启用上下文分析",
+    "type": "bool",
+    "default": true,
+    "hint": "启用后会提取撤回消息前的文字消息，帮助 AI 更好地理解撤回内容"
+  },
+  "context_count": {
+    "description": "上下文提取数量",
+    "type": "int",
+    "default": 10,
+    "hint": "最多提取多少条撤回前的消息（1-10条）"
+  },
+  "enable_image_recall": {
+    "description": "是否检测图片撤回",
+    "type": "bool",
+    "default": true,
+    "hint": "关闭后将不会处理图片消息的撤回"
+  },
+  "enable_private_chat": {
+    "description": "是否在私聊中生效",
+    "type": "bool",
+    "default": false
+  },
+  "enable_group_chat": {
+    "description": "是否在群聊中生效",
+    "type": "bool",
+    "default": true
+  },
+  "show_sender_info": {
+    "description": "是否显示发送者信息",
+    "type": "bool",
+    "default": true
+  },
+  "comment_style": {
+    "description": "锐评风格",
+    "type": "string",
+    "default": "幽默风趣",
+    "options": ["幽默风趣", "严肃认真", "毒舌吐槽", "温和友善"]
+  },
+  "max_cache_size": {
+    "description": "最大缓存消息数",
+    "type": "int",
+    "default": 1000,
+    "hint": "超过此数量时，自动清理最旧的消息"
+  }
+}
